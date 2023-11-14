@@ -1,27 +1,44 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+* {
+    scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.active {
+    color: #F94962;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Tailwind Styles */
+.boxWidth {
+    @apply w-full mx-auto md:max-w-4xl lg:max-w-5xl xl:max-w-[1200px];
+}
+
+.paddingX {
+    @apply px-5 xs:px-8;
+}
+
+.paddingY {
+    @apply pt-20 lg:pt-36;
+}
+
+.flexCenter {
+    @apply flex justify-center items-center;
+}
+
+.flexStart {
+    @apply flex justify-center items-start;
+}
+
+.heading {
+    @apply text-heading text-2xl sm:text-[32px] lg:text-4xl sm:leading-[3rem] lg:leading-[3rem] xl:leading-[3.2rem] mx-auto mb-3 sm:mb-5 lg:mb-6;
+}
+
+.headingText {
+    @apply text-[15px] xs:text-base leading-7 xs:leading-8 mb-3;
 }
